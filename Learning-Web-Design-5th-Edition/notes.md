@@ -196,3 +196,11 @@ and elements that provide information about a document but don't affect its disp
             font-size: 1em;
         }
         </style>
+
+## VALIDATING YOUR DOCUMENTS 
+-   __Check your markup yourself.__ Make sure that you have abided by all the rules of whatever version of HTML you are using.
+
+-   __Use a validator.__ 
+    Using a web-based validator 
+            
+            html5.validator.nu
