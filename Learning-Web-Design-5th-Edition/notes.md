@@ -162,3 +162,37 @@ and elements that provide information about a document but don't affect its disp
     -   Attribute names and values for each element are defined in HTML specifications; in other words, you can't make up an attribute for an element.
     -   The HTML specification also defines which attributes are required in order for the document to be valid.
 
+### STEP 5: CHANGE THE LOOK WITH A STYLE SHEET
+
+#### Adding a style sheet
+1.  In index.html
+2.  The style element is placed inside the document head.
+    Start by adding the style element to the document as shown here:
+
+        <head>
+            <meta charset='utf-8'>
+            <title>Black Goose Bistro</title>
+            <style>
+            </style>
+        </head>
+3.  Next, type the following style rules within the style element.
+
+        <style>
+        body{
+            background-color: #faf2e4;
+            margin: 0 10%;
+            font-family: sans-serif;
+        }
+        h1{
+            text-align: center;
+            font-family: serif;
+            font-weight: normal;
+            text-transform: uppercase;
+            border-bottom: 1px solid #57b1dc;
+            margin-top: 30px;
+        }
+        h2{
+            color: #d1633c;
+            font-size: 1em;
+        }
+        </style>
