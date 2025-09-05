@@ -1,4 +1,4 @@
-# CHAPTER: CREATING A SIMPLE PAGE
+# CHAPTER 1: HTML FOR STRUCTURE
 **(HTML OVERVIEW)**
 -   get a feel for how markup works
     -   elements
@@ -121,3 +121,44 @@ and elements that provide information about a document but don't affect its disp
         <p>1005 Gravenstein Highway North<br>Sebastopol, CA 95472</p>
 
 #### Attributes 
+-   Instructions that clarify or modify an element.
+-   For the img element, the __src__ (source) attribute is required, and __specifies the location (URL) of the image file.__
+-   The syntax for an attribute is as follows:
+
+        attributename == 'value'
+
+-   Attributes go after the element name, separated by a space. In non-empty elements, attributes go in the opening tag only:
+
+        <element attributename = 'value'>
+        <element attributename = 'value'>content</element>
+
+-   You can also put more than one attribute in an element in any order.
+
+        <element attribute1 = 'value' attribute2 = 'value'>
+
+-   Sample of an img element with its required attributes labeled.
+
+                attribute names and values are separated by an equals sign(=)
+                 |
+        attribute|              attribute name
+        name  |  |     value    |
+              |  |      |       |           value
+              |  |      |       |           |
+        <img src = 'bird.jpg' alt = 'photo of bird'>
+              |           |  |  |               |
+              +-----------+  |  +---------------+
+                    |        |         |
+                attribute    |     attribute
+                             |
+                             + multiple attributes are separated by a space
+
+-   Need to know about attributes:
+    -   Attributes go __after element name in the opening tag only__, never in the closing tag.
+    -   There may be several attributes applied to an element, __separated in the opening tag__. Their order is not important.
+    -   Most attributes take values, which follow an equals sign (=)
+    -   Some attribute values are single descriptive words. Often called a __Boolean attribute__ because it describes a feature that is either on or off.
+    -   A value might be a number, a word, a string of text, a URL, ora measurement, depending on the purpose of the attribute.
+    -   Wrapping attribute values in double quotation marks is a strong convention, but are not required and may be omitted. 
+    -   Attribute names and values for each element are defined in HTML specifications; in other words, you can't make up an attribute for an element.
+    -   The HTML specification also defines which attributes are required in order for the document to be valid.
+
