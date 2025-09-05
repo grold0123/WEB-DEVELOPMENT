@@ -5,7 +5,7 @@ import subprocess
 subprocess.run(["git", "add", "."], check=True)
 
 # Commit
-subprocess.run(["git", "commit", "-m", "Update project"], check=True)
+subprocess.run(["git", "commit", "-m", "Update project"])
 
 # Push
 subprocess.run(["git", "push"], check=True)
