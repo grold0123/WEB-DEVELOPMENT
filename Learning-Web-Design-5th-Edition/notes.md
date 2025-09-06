@@ -1364,4 +1364,78 @@ Provide semantic meaning to phrases within the chunks by using what the HTML5 sp
 
 8.  Program code elements 
 
+    -   Used for describing the parts of technical documents
+
+        -   __code element,__ used for code
+
+        -   __var element,__ used for variables
+
+        -   __samp element,__ program samples 
+
+        -   __kbd element,__ user-entered keyboard strokes
+    
+9.  Subscript and superscript 
+
+    -   Uses subsript __(sub)__ and  superscript __(sup)__ elements 
+
+    -   Causes the selected text to display in a smaller size.
+
+    -   These elements may be helpful for indicating chemical formulas or mathematical equations.
+
+            <p>H<sub>2</sub>O</p>
+
+            <p>E=MC<sup>2</sup> </p>
+
+10. Highlighted text 
+
+    -   Indicates a word that may be considered especially relevant to the reader.
+
+        -   Used to dynamically highlight a search term in a page of results
+
+        -   To manially call attention to a passage of text 
+
+        -   To indicate the current page in a series.
+
+                <p>... PART I. ADMINISTRATION OF THE GOVERNMENT. TITLE IX. 
+                TAXATION. CHAPTER 65C. MASS. <mark>ESTATE TAX</mark>. Chapter 65C: Sect. 2. 
+                Computation of <mark>estate tax</mark>.</p>
+
+
+11. Dates and times 
+
+    -   __time element,__ indicates dates, times, or date-time combos.
+
+    -   Can also have an attribute called the datetime to specify the date time information in a standardized time format.
+
+              date          time        timezone
+            YYYY-MM-DD  Thh:mm:ss.dd +- hh:mm
+            
+            example:
+            3pm PST on December 25, 2016          2016-12-25T15:00-8:00            
+
+    -   Time only: 9:30 pm
+
+            <time datetime="21:30">9:30p.m</time>
+    
+    -   Date only: Jun 19, 2016
+
+            <time datetime="2016-06-19">June 19, 2016</time>
+
+    -   Date and time: Sept. 5 1970, 1:11a.m.
+
+            <time datetime="1970-09-05T01:11:00">Sept. 5, 1970, 1:11a.m.</time>
+    
+    -   Date and time, with time zone information: 8:00am on July 19, 2015, in Providence, RI
+
+            <time datetime="2015-07-19T08:00:00-05:00">July 19, 2015, 8am, Providence RI</time>
+
+12. Machine-readable information 
+
+    -   __data element,__ helps computers make sense of content.
+
+    -   The required value attribute provides the machine-readable information.
+
+            <data value="12">Twelve</data>
+            <data value="978-1-449-39319-9">CSS: The Definitive Guide</data>
+    
     
