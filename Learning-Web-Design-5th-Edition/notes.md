@@ -597,4 +597,238 @@ and elements that provide information about a document but don't affect its disp
             <figcaption>Sample CSS rule.</figcaption>
         </figure>
 
+## ORGANIZING PAGE CONTENT 
+
+-   HTML5 introduced new elements that give semantic meaning to sections of a typical web page or application
+
+    1.  main content __(main)__
+
+    2.  headers __(header)__
+
+    3.  footers __(footer)__
+
+    4.  sections __(section)__
+
+    5.  articles __(article)__
+
+    6.  navigation __(nav)__
+
+    7.  complementary content __(aside)__
+
+### Main Content 
+
+-   Web pages these days are loaded with different types of content.
+
+-   It is helpful to cut to the chase and explicitly point out the main content on the page.
+
+-   Use the main element to identify the primary content of a page or application.
+
+-   The content of a __main __ element should be unique to that page.
+
+        <body>
+            <header>
+                <main>
+                    <h1>
+                        Humanis Sans Serif
+                    </h1>
+                    <!--code continues-->
+                </main>
+            </header>
+        </body>
+
+-   The W3C HTML5 specification states that: 
+
+    1.  Pages should have only one main section.
+
+    2.  It should not be nested within an: 
+        -   article 
+        -   aside 
+        -   header
+        -   footer
+        -   nav
+
+### Headers and Footers 
+
+Web authors have been labeling header and footer sections in their documents for years, so a dedicated header and footer elements have been created.
+
+### Headers 
+
+-   Used for introductory material that typically appears at the beginning of a web page or at the top of a section or article.
+
+        <body>
+            <header>
+                <img src="" alt="">
+                <h1>
+                    Nuts about Web Fonts
+                </h1>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/">Blog</a></li>
+                        <li><a href="/">Shop</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <!--page content-->
+        </body>
+
+-   When used in an individual article, the __header__ might include:
+    1.  article title
+    2.  author
+    3.  publication date
+
+            <article>
+                <header>
+                    <h1>
+                        More about WOFF
+                    </h1>
+                    <p>
+                        by Jennifer Robbins, <time datetime="2017-11-11">November 11, 2017</time>
+                    </p>
+                </header>
+                <!-- article content here -->
+            </article>
+
+### Footers 
+
+-   Used to indicate the type of information that typically comes at the end of a page or an article, such as:
+    -   the author
+    -   copyright
+    -   information 
+    -   related documents
+    -   navigation
+
+-   The footer element may apply to the entire document or it could be associated with a particular section or article.
+
+-   If the footer is contained directly within the body element, either before or after all the other body content, then it applies to the entire page or application.
+
+-   If it is contained in a sectioning element (section, article, nav, or aside), it is parsed as the footer for just that section.
+
+-   Not required to appear last in the document or sectioning element. It could also appear at or near the beginning if that makes sense.
+
+        <article>
+            <header>
+                <h1>
+                    More about WOFF
+                </h1>
+                <p>
+                    by Jennifer Robbins, <time datetime="2025-9-6">September 6, 2025</time>
+                </p>
+            </header>
+            <!-- article content here -->
+            <footer>
+                <p>
+                    <small>
+                        Copyright &copy;2025 Jennifer Robbins.
+                    </small>
+                </p>
+                <nav>
+                    <ul>
+                        <li><a href="/">Previous</a></li>
+                        <li><a href="/">Next</a></li>
+                    </ul>
+                </nav>
+            </footer>
+        </article>
+
+### Sections and Articles 
+
+-   Long documents are easier to use when they are divided into smaller parts.
+
+-   For example:
+
+    -   Books are divided into chapters.
+
+    -   Newspapers have sections:
+
+        -   local news
+        -   sports
+        -   comics
+
+-   To divide long web documents into sections use the section element.
+
+-   Sections typically include a heading plus content that has meaningful  reason to be grouped together.
+
+        <section>
+            <h2>
+                Typography Books
+            </h2>
+            <ul>
+                <li>_</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>
+                Online Tutorials
+            </h2>
+            <p>
+                These are the best tutorials on the web.
+            </p>
+            <ul>
+                <li>
+                    _
+                </li>
+            </ul>
+        </section>
+
+-   It is useful for:
+    -   magazine
+    -   newspaper
+    -   articles
+    -   blog posts
+    -   comments
+    -   other items that could be extracted for external use
+
+            <article>
+                <h1>
+                    Get to know Helvetica
+                </h1>
+                <section>
+                    <h2>
+                        History of Helvetica
+                    </h2>
+                    <p>
+                        _
+                    </p>
+                </section>
+                <section>
+                    <h2>
+                        Helvetica Today
+                    </h2>
+                    <p>
+                        _
+                    </p>
+                </section>
+            </article>
+
+-   A section in a web document might be composed of a number of articles:
+
+        <section id="essays">
+
+            <article>
+                <h1>
+                    A Fresh Look at Futura
+                </h1>
+                <p>
+                    _
+                </p>
+            </article>
+
+            <article>
+                <h1>
+                    Getting Personal with Humanist
+                </h1>
+                <p>
+                    _
+                </p>
+            </article>
+
+        </section>
+
+-   The __section and article__ elements are easily confused, particularly because it is possible to nest one in the other and vice versa.
+
+-   If the content is self-contained and could appear outside the current context, it is best marked up as an article.
+
+### Aside (Sidebars)
 
