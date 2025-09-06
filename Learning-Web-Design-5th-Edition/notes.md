@@ -249,6 +249,7 @@ and elements that provide information about a document but don't affect its disp
         }
         </style>
 
+
 ## VALIDATING YOUR DOCUMENTS 
 
 -   __Check your markup yourself.__ Make sure that you have abided by all the rules of whatever version of HTML you are using.
@@ -271,7 +272,7 @@ and elements that provide information about a document but don't affect its disp
 -   Paragraphs are the most rudimentary elements of a text document.
 
 -   Indicate a paragraph with the p element by inserting an opening 
-    <p> tag at the beginning of the paragraph and a closing <\p> tag after it, as shown in this example:
+    (p) tag at the beginning of the paragraph and a closing (\p) tag after it, as shown in this example:
 
         <p>...</p>
         Paragraph element
@@ -288,6 +289,23 @@ and elements that provide information about a document but don't affect its disp
         sans-serif fonts. In general, sans-serif fonts appear sleeker
         and more modern.
         </p>
+
+<p>...</p>
+Paragraph element
+
+<p>
+Serif typefaces have small slabs at the ends of 
+letter strokes. In general, serif fonts can make 
+large amounts of text easier to read.
+</p> 
+
+<p>
+Sans-serif fonts do not have serif slabs; their strokes
+are square on the end. Helvetica and Arial are examples of 
+sans-serif fonts. In general, sans-serif fonts appear sleeker
+and more modern.
+</p>
+
 
 -   Visual browsers nearly always display paragraphs on new lines with a bit of space between by default.
 
@@ -319,6 +337,18 @@ and elements that provide information about a document but don't affect its disp
         <p>Description and history of the Georgia typeface.</p>
         <h2>Sans-serif Typefaces</h2>
         <p>Sans-serif typefaces do not have slabs at the ends of strokes.</p>
+
+<h1>Type Design</h1>
+<h2>Serif Typefaces</h2>
+<p>Serif typefaces have small slabs at the ends of letter strokes. In general, serif fonts can make large amounts of text easier to read.</p>
+<h3>Baskerville</h3>
+<h4>History</h4>
+<p>The history of the Baskervile typeface.</p>
+<h3>Georgia</h3>
+<p>Description and history of the Georgia typeface.</p>
+<h2>Sans-serif Typefaces</h2>
+<p>Sans-serif typefaces do not have slabs at the ends of strokes.</p>
+
 
 -   The markup in the example above would create the following document outline:
 
@@ -355,13 +385,25 @@ and elements that provide information about a document but don't affect its disp
         <h3>Georgia</h3>
         <p>Description and history of the Georgia typeface.</p>
 
+<h3>Times</h3>
+<p>Description and history of the Times typeface.</p>
+<hr>
+<h3>Georgia</h3>
+<p>Description and history of the Georgia typeface.</p>
+
+
 ## LISTS 
+
 -   All list elements -- the lists themselves and the items that go in them -- are displayed as block elements by default, which means that they start on a new line and have some space above and below, but that may be altered with CSS. 
 
 -   Three types of lists:
+
     -   __Unordered lists.__ Collection of items that appear in no particular order
+
     -   __Ordered lists.__ Lists in which the sequence of the items is important
+
     -   __Description lists.__ Lists that consist of name and value pairs, including but not limited to terms and definitions
+
 
 ### Unordered Lists
 
@@ -381,8 +423,17 @@ and elements that provide information about a document but don't affect its disp
             <li>Script</li>
             <li>Display</li>
             <li>Dingbats</li>
-            <li></li>
         </ul>
+
+<ul>
+    <li>Serif</li>
+    <li>Sans-serif</li>
+    <li>Script</li>
+    <li>Display</li>
+    <li>Dingbats</li>
+</ul>
+
+
 
 ### Ordered Lists 
 
@@ -401,6 +452,13 @@ and elements that provide information about a document but don't affect its disp
             <li>Type goes digital (1980s)</li>
         </ol>
 
+<ol>
+    <li>Gutenberg develops moveable type (1450s)</li>
+    <li>Linotype is introduced (1890s)</li>
+    <li>Photocomposition catches on (1950s)</li>
+    <li>Type goes digital (1980s)</li>
+</ol>
+
 -   If you want a numbered list to start at a number other than 1, you can use the start attribute in the ol element to specify another starting number 
 
         <ol start='16'>
@@ -408,6 +466,12 @@ and elements that provide information about a document but don't affect its disp
             <li>Select the Character tab.</li>
             <li>Choose a typeface from the pop-up menu.</li>
         </ol>
+
+<ol start='16'>
+    <li>Highlight the text with the text tool.</li>
+    <li>Select the Character tab.</li>
+    <li>Choose a typeface from the pop-up menu.</li>
+</ol>
 
 ### Description Lists 
 
@@ -421,6 +485,15 @@ and elements that provide information about a document but don't affect its disp
 
         <dd>...</dd>
         A value, such as a description or definition
+
+<dl>...</dl>
+A decription list
+
+<dt>...</dt>
+A name, such as a term or label
+
+<dd>...</dd>
+A value, such as a description or definition
 
 -   Example 
 
@@ -465,6 +538,47 @@ and elements that provide information about a document but don't affect its disp
             </dd>
         </dl>
 
+<dl>
+
+<dt>
+    Linotype
+</dt>
+<dd>
+    <p>
+        Line-casting allowed type to be selected, used, 
+        then recirculated into the machine automatically. 
+        This advance increased the speed of typesetting 
+        and printing dramatically.
+    </p>
+</dd>
+
+<dt>
+    Photocomposition
+</dt>
+<dd>
+    <p>
+        Typefaces are stored on film then projected onto photo-sensitive 
+        paper. Lenses adjust the size of the type.
+    </p>
+</dd>
+
+<dt>
+    Digital type
+</dt>
+<dd>
+    <p>
+        Digital typefaces store the outline of the 
+        font shape in a format such as Postscript. 
+        The outline may be scaled to any size for output.
+    </p>
+    <p>
+        Postscript emerged as a standard due to its 
+        support of graphics and its early support on 
+        the Macintosh computer and Apple laser printer.
+    </p>
+</dd>
+</dl>
+
 -   It is permitted to have multiple definitions with one term and vice versa.
 
         <dl>
@@ -492,6 +606,31 @@ and elements that provide information about a document but don't affect its disp
                 </dd>
         </dl>
 
+<dl>
+<dt>
+    Serif examples
+</dt>
+    <dd>
+        Baskerville
+    </dd>
+    <dd>
+        Goudy
+    </dd>
+
+<dt>
+    Sans-serif examples 
+</dt>
+    <dd>
+        Helvetica
+    </dd>
+    <dd>
+        Futura
+    </dd>
+    <dd>
+        Avenir
+    </dd>
+</dl>
+
 ## MORE CONTENT ELEMENTS 
 
 1.   long quotations (blockquote)
@@ -503,7 +642,6 @@ and elements that provide information about a document but don't affect its disp
 -   These elements are considered __grouping content__ in the HTML5 spec
 
 -   These elements are also displayed by the browser as a block by default.
-
 
 ### Long Quotations 
 
@@ -540,6 +678,25 @@ and elements that provide information about a document but don't affect its disp
             </p>
         </blockquote>
 
+<p>
+    Renowned type designer, Matthew Carter, has this 
+    to say about his profession:
+</p>
+
+<blockquote>
+    <p>
+        Our alphabet hasn't changed in eons; there isn't 
+        much latitude in what a designer can do with the 
+        individual letters.
+    </p>
+    <p>
+        Much like a piece of classical music, the score 
+        is written down. It's not something that is tampered 
+        with, and yet, each conductor interprets that score 
+        differently. There is tension in the interpretation.
+    </p>
+</blockquote>
+
 ### Preformatted Text
 
 -   For content in which whitespace is important for conveying meaning
@@ -565,6 +722,19 @@ and elements that provide information about a document but don't affect its disp
                                     curious
                                     whitespace.
         </p>
+
+<pre>
+This is                     an              example of 
+            text with a         lot of 
+                        curious
+                        whitespace.
+</pre>
+<p>
+This is         an          example of 
+        text with a         lot of      
+                            curious
+                            whitespace.
+</p>
 
 ### Figures 
 
@@ -596,6 +766,23 @@ and elements that provide information about a document but don't affect its disp
             </pre>
             <figcaption>Sample CSS rule.</figcaption>
         </figure>
+
+
+<figure>
+<img src="piechart.png" alt="chart showing fonts on mobile devices">
+</figure>
+
+<figure>
+    <pre>
+        <code>
+            body {
+                background-color: #000;
+                color: red;
+            }
+        </code>
+    </pre>
+    <figcaption>Sample CSS rule.</figcaption>
+</figure>
 
 ## ORGANIZING PAGE CONTENT 
 
@@ -636,6 +823,17 @@ and elements that provide information about a document but don't affect its disp
             </header>
         </body>
 
+<body>
+    <header>
+        <main>
+            <h1>
+                Humanis Sans Serif
+            </h1>
+            <!--code continues-->
+        </main>
+    </header>
+</body>
+
 -   The W3C HTML5 specification states that: 
 
     1.  Pages should have only one main section.
@@ -671,6 +869,22 @@ Web authors have been labeling header and footer sections in their documents for
             </header>
             <!--page content-->
         </body>
+<body>
+    <header>
+        <img src="" alt="">
+        <h1>
+            Nuts about Web Fonts
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">Blog</a></li>
+                <li><a href="/">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--page content-->
+</body>
 
 -   When used in an individual article, the __header__ might include:
     1.  article title
@@ -688,6 +902,17 @@ Web authors have been labeling header and footer sections in their documents for
                 </header>
                 <!-- article content here -->
             </article>
+<article>
+    <header>
+        <h1>
+            More about WOFF
+        </h1>
+        <p>
+            by Jennifer Robbins, <time datetime="2017-11-11">November 11, 2017</time>
+        </p>
+    </header>
+    <!-- article content here -->
+</article>
 
 ### Footers 
 
@@ -730,6 +955,30 @@ Web authors have been labeling header and footer sections in their documents for
                 </nav>
             </footer>
         </article>
+<article>
+    <header>
+        <h1>
+            More about WOFF
+        </h1>
+        <p>
+            by Jennifer Robbins, <time datetime="2025-9-6">September 6, 2025</time>
+        </p>
+    </header>
+    <!-- article content here -->
+    <footer>
+        <p>
+            <small>
+                Copyright &copy;2025 Jennifer Robbins.
+            </small>
+        </p>
+        <nav>
+            <ul>
+                <li><a href="/">Previous</a></li>
+                <li><a href="/">Next</a></li>
+            </ul>
+        </nav>
+    </footer>
+</article>
 
 ### Sections and Articles 
 
@@ -771,6 +1020,28 @@ Web authors have been labeling header and footer sections in their documents for
                 </li>
             </ul>
         </section>
+<section>
+    <h2>
+        Typography Books
+    </h2>
+    <ul>
+        <li>_</li>
+    </ul>
+</section>
+
+<section>
+    <h2>
+        Online Tutorials
+    </h2>
+    <p>
+        These are the best tutorials on the web.
+    </p>
+    <ul>
+        <li>
+            _
+        </li>
+    </ul>
+</section>
 
 -   It is useful for:
     -   magazine
@@ -802,6 +1073,28 @@ Web authors have been labeling header and footer sections in their documents for
                 </section>
             </article>
 
+<article>
+    <h1>
+        Get to know Helvetica
+    </h1>
+    <section>
+        <h2>
+            History of Helvetica
+        </h2>
+        <p>
+            _
+        </p>
+    </section>
+    <section>
+        <h2>
+            Helvetica Today
+        </h2>
+        <p>
+            _
+        </p>
+    </section>
+</article>
+
 -   A section in a web document might be composed of a number of articles:
 
         <section id="essays">
@@ -826,9 +1119,249 @@ Web authors have been labeling header and footer sections in their documents for
 
         </section>
 
+<section id="essays">
+    <article>
+        <h1>
+            A Fresh Look at Futura
+        </h1>
+        <p>
+            _
+        </p>
+</article>
+
+<article>
+        <h1>
+            Getting Personal with Humanist
+        </h1>
+        <p>
+            _
+        </p>
+    </article>
+</section>
+
 -   The __section and article__ elements are easily confused, particularly because it is possible to nest one in the other and vice versa.
 
 -   If the content is self-contained and could appear outside the current context, it is best marked up as an article.
 
 ### Aside (Sidebars)
 
+-   Identifies content that is separate from, but tangentially related tom the surrounding content.
+
+-   In print, its equivalent is a sidebar, but it couldn't be called 'sidebard' because putting something on the side is a presentational description, not semantic.
+
+-   Aside can be used for pull quotes, background information, lists of links, callouts, or anything else that might be associated with (but not critical to) a document.
+
+        <h1>
+            Web Typography
+        </h1>
+        <p>
+            Back in 1997, there were competing font formats and tools for making them...
+        </p>
+        <p>
+            We now have a number of methods for using beautiful fonts on web pages...
+        </p>
+        <aside>
+            <h2>
+                Web Font Resources
+            </h2>
+            <ul>
+                <li>
+                    <a href="http://typekit.com/">
+                        Typekit
+                    </a>
+                </li>
+                <li>
+                    <a href="http://fonts.google.com">
+                        Google Fonts 
+                    </a>
+                </li>
+            </ul>
+        </aside>
+    
+<h1>
+    Web Typography
+</h1>
+<p>
+    Back in 1997, there were competing font formats and tools for making them...
+</p>
+<p>
+    We now have a number of methods for using beautiful fonts on web pages...
+</p>
+<aside>
+    <h2>
+        Web Font Resources
+    </h2>
+    <ul>
+        <li>
+            <a href="http://typekit.com/">
+                Typekit
+            </a>
+        </li>
+        <li>
+            <a href="http://fonts.google.com">
+                Google Fonts 
+            </a>
+        </li>
+    </ul>
+</aside>
+
+### Navigation 
+
+-   The __nav__ element gives developers a semantic way to identify navigation for a site.
+
+        <nav>
+            <ul>
+                <li><a href="/">Serif</a></li>
+                <li><a href="/">Sans-serif</a></li>
+                <li><a href="/">Script</a></li>
+                <li><a href="/">Display</a></li>
+                <li><a href="/">Dingbats</a></li>
+            </ul>
+        </nav>        
+
+<nav>
+    <ul>
+        <li><a href="/">Serif</a></li>
+        <li><a href="/">Sans-serif</a></li>
+        <li><a href="/">Script</a></li>
+        <li><a href="/">Display</a></li>
+        <li><a href="/">Dingbats</a></li>
+    </ul>
+</nav>
+
+-   Not all lists of links should be wrapped in __nav__ tags, but the specifications makes it clear that __nav__ should be used for links that provide primary navigation around a site.
+
+### Addresses
+
+-   Used to create an area for contact information for the author or maintainer of the document.
+
+-   Generally placed at the end of the document or in a section or article within a document.
+
+-   An address would be right at home in a footer element.
+
+-   It is intended specifically for author contact information.
+
+        <address>
+            Contibuted by <a href="../authors/robbins/">Jennifer Robbins</a>,
+            <a href="http://www.oreilly.com">O'Reilly Media</a>
+        </address>
+
+<address>
+    Contibuted by <a href="../authors/robbins/">Jennifer Robbins</a>,
+    <a href="http://www.oreilly.com">O'Reilly Media</a>
+</address>
+
+## THE INLINE ELEMENT ROUNDUP
+
+Provide semantic meaning to phrases within the chunks by using what the HTML5 specification calls text-level semantic elements.
+
+### Text-Level (inline) Elements
+
+1.  Emphasized text
+
+    -   use __em__ element to indicate which part of a sentence should be stressed or emphasized.
+
+            <p>
+                <em>Arlo</em>is very smart.
+            </p>
+            <p>
+                Arlo is <em>very</em> smart.
+            </p>
+<p>
+    <em>Arlo</em> is very smart.
+</p>
+<p>
+    Arlo is <em>very</em> smart.
+</p>
+
+2.  Important text 
+
+    -   use __strong__ element to indicate that a word or phrase is important, serious or urgent
+
+            <p>
+                When returning the car, <strong>drop the keys 
+                inthe red box by the front desk.</strong>
+            </p>
+<p>
+    When returning the car, <strong>drop the keys 
+    inthe red box by the front desk.</strong>
+</p>
+
+3.  Elements originally named for their presentational properties
+
+    -   __b element,__ keywords, product names, and other phrases that need to stand out from surrounding text without conveying added importance or emphasis.
+
+            <p>
+                The slabs at the ends of letter strokes are called <b>serifs</b>.
+            </p>
+
+    -   __i element,__ indicates text that is in a different voice or mood than the surrounding text, such as a phrase from another language, a technical term, or a thought.
+
+            <p>
+                Simply change the font and <i>Voila!</i>, a new personality!
+            </p>
+
+    -   __s element,__ indicates text is incorrect.
+
+            <p>
+                Scala Sans was designed by <s>Eric Gill</s> Martin Majoor.
+            </p>
+
+    -   __u element,__ used when the text has semantic significance, such as formal name
+
+            <p>
+                New York subway signage is set in <u>Helviteca</u>.
+            </p>
+    -   __small element,__ indicates an addendum or side note to the main text, such as the legal 'small print' at the bottom of a document.
+
+            <p>
+                <small>(This font is free for personal and commercial use.)</small>
+            </p>
+
+4.  Short quotations 
+
+    -   __q element,__ adds a quotation mark to texts or phrases or whole sentences and mode.
+
+            Matthew Carter says, <q>Our alphabet hasn't changed in eons.</q>
+
+    -   According to HTML specifications, browsers should add quotation marks around q elements automatically, so you don't need to include them in the source document.
+
+5.  Abbreviations and acronyms
+
+    -   __abbr element,__ is used for abbreviations and acronyms
+
+    -   Used for shortened versions of a word ending in a period.
+
+    -   Example :
+
+        Connecticut , Conn.
+
+        United States of America , USA
+
+    -   The title attribute provides the long version of the shortened term
+
+            <abbr title="Points">pts.</abbr>
+            <abbr title="American Type Founders">ATF</abbr> 
+
+6.  Citations 
+
+    -   Used to identify a reference to another document, such as a book, magazine, article title, and so on.
+
+    -   Typically rendered in italic text by default.
+
+            <p>
+            Passages of this article were inspired by <cite> The Complete Manual of Typography</cite>
+            by James Felici 
+            </p>            
+
+7.  Defining Terms
+    
+    -   __dfn element,__ point out the first and defining instance of a word in a document in some fashion.
+
+            <p>
+                <dfn>Script typefaces</dfn> are based on handwriting.
+            </p>
+
+8.  Program code elements 
+
+    
