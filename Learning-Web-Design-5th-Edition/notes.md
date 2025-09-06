@@ -581,6 +581,20 @@ and elements that provide information about a document but don't affect its disp
 
 -   That means if a figure is removed from its original placement in the main flow, both the figure and the main flow should continue to make sense.
 
--   Example
+        <figure>
+        <img src="piechart.png" alt="chart showing fonts on mobile devices">
+        </figure>
 
-        
+        <figure>
+            <pre>
+                <code>
+                    body {
+                        background-color: #000;
+                        color: red;
+                    }
+                </code>
+            </pre>
+            <figcaption>Sample CSS rule.</figcaption>
+        </figure>
+
+
